@@ -14,6 +14,7 @@
 
 :root {
   /* Font sizes */
+  --fs-big: 8rem;
   --fs-1: 2.5rem;
   --fs-2: 1.5rem;
   --fs-3: 1.25rem;
@@ -245,10 +246,38 @@ body::before {
   border-radius: 5px;
 }
 
+/* SCORE CONTAINER */
+.score-display {
+  width: 100%;
+  min-height: 90vh;
+  place-content: center;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.final-text {
+  font-size: var(--fs-2);
+}
+
+.score {
+  font-size: var(--fs-big);
+}
+
+.restart {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  color: #fff;
+  font-size: var(--fs-2);
+  cursor: pointer;
+}
+
 /* TABLET DEVICES */
 @media screen and (min-width: 768px) {
   :root {
     /* Font sizes */
+    --fs-big: 10rem;
     --fs-1: 3.5rem;
     --fs-2: 1.75rem;
     --fs-3: 1.5rem;
@@ -275,23 +304,17 @@ body::before {
     grid-template-columns: repeat(5, minmax(80px, 1fr));
   }
 
-  .home-img {
-    bottom: 0px;
-    max-width: 300px;
-    left: 0;
-    display: inline-block;
-  }
-
   /* QUESTIONS CONTAINER */
   .questions {
     margin-inline: auto;
   }
 }
 
-/* LARGER DEVICES */
-@media screen and (min-width: 1024px) {
+/* LAPTOP DEVICES */
+@media screen and (min-width: 1194px) {
   :root {
     /* Font sizes */
+    --fs-big: 13rem;
     --fs-1: 3.75rem;
     --fs-2: 2rem;
     --fs-3: 1.25rem;
@@ -337,7 +360,9 @@ body::before {
   }
 
   .home-img {
-    max-width: 650px;
+    bottom: 0px;
+    left: 0;
+    max-width: 600px;
     left: 50px;
     display: inline-block;
   }
@@ -350,6 +375,7 @@ body::before {
   }
 }
 
+/* LARGE DEVICES */
 @media screen and (min-width: 1440px) {
   /* MAIN PAGE CONTAINER */
   .home {

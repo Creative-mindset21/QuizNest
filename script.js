@@ -7,6 +7,10 @@ const questionsEl = document.getElementById("question");
 const optionsList = document.querySelectorAll("#options li");
 const optionContainer = document.querySelector("#options");
 const nextBtn = document.getElementById("next");
+const scoreContainer = document.getElementById("score-container");
+const scoreEl = document.getElementById("score");
+const restartBtn = document.getElementById("restart-btn");
+const finalText = document.getElementById("final-text");
 
 let questionsArr = [];
 let categoryQuestion = "";
@@ -57,7 +61,6 @@ const renderQuiz = () => {
   if (!questionsArr || questionsArr.length === 0) return;
 
   const mainQuestion = questionsArr[currentQuestionIndex];
-  console.log(mainQuestion);
 
   const shuffledArr = shuffle([
     mainQuestion.correctAnswer,
@@ -82,7 +85,7 @@ optionContainer.addEventListener("click", (e) => {
   if (!listEl) return;
 
   const correctAnswer = questionsArr[currentQuestionIndex].correctAnswer;
-  console.log(correctAnswer);
+
   const userSelect = listEl.querySelector("span:last-child").textContent;
 
   optionContainer.classList.add("disable-clicks");
@@ -91,7 +94,6 @@ optionContainer.addEventListener("click", (e) => {
   if (userSelect === correctAnswer) {
     listEl.classList.add("correct");
     score++;
-    console.log(score);
   } else {
     listEl.classList.add("incorrect");
 
@@ -117,6 +119,33 @@ nextBtn.addEventListener("click", () => {
     currentQuestionIndex++;
     renderQuiz();
   } else {
-    alert("Quiz finished");
+    let finalFeedback = "";
+
+    if (score === 10) {
+      finalFeedback = `🏆 Perfect Score! You are a certified genius!`;
+    } else if (score >= 8) {
+      finalFeedback = `🌟 Excellent job! You really know your stuff!`;
+    } else if (score >= 5) {
+      finalFeedback = `👍 Not bad! A solid effort, but there's room to grow.`;
+    } else if (score >= 1) {
+      finalFeedback = `📚  Don't worry, a little studying will get you there next time!`;
+    } else {
+      finalFeedback = `😢 Ouch. Did you close your eyes and guess? Time to hit the books!`;
+    }
+
+    questionContainer.classList.remove("active");
+    scoreContainer.classList.add("active");
+
+    finalText.textContent = finalFeedback;
+    scoreEl.textContent = `${score}/${questionsArr.length}`;
   }
+});
+
+/* RESTART THE QUIZ WHEN CLICKED */
+restartBtn.addEventListener("click", () => {
+  scoreContainer.classList.remove("active");
+  homeContainer.classList.add("active");
+
+  questionsArr = [];
+  score = 0;
 });
