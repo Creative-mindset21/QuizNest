@@ -244,6 +244,7 @@ body::before {
   font-weight: 600;
   font-size: 1.1rem;
   border-radius: 5px;
+  color: #000;
 }
 
 /* SCORE CONTAINER */
