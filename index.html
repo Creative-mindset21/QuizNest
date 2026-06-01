@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta
+      name="description"
+      content="Quiz Nest is a quiz application where you can choose different categories and get 10 randomized questions in every try. It is used to sharpen the brain"
+    />
+
+    <!-- FONT AWESOME LINKING -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS LINKING & TITLE -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Quiz Nest</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="home container active" id="home-container">
+        <section class="home-header">
+          <div>
+            <img src="./assets/logo.png" alt="logo" class="logo" />
+          </div>
+          <p>QuizNest</p>
+        </section>
+
+        <section class="home-main flex">
+          <div class="home-text">
+            <h1>Unleash Your Inner Wizard of Wisdom</h1>
+            <p>
+              Embark on a Journey of Knowledge Exploration with Our Extensive
+              Collection of Interactive Quizzes.
+            </p>
+          </div>
+
+          <div class="home-categories">
+            <p>What Topic are you interested in?</p>
+
+            <div class="home-btns">
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+
+              <button>
+                <i class="fa-solid fa-palette"></i>
+                <span>Art</span>
+              </button>
+            </div>
+          </div>
+
+          <img src="./assets/home-img.png" alt="" class="home-img" />
+        </section>
+      </div>
+
+      <div class="questions container" id="question-container">
+        <p>
+          Question <span id="current-question">2</span>/<span
+            id="total-questions"
+            >10</span
+          >
+        </p>
+
+        <p id="question" class="question">
+          Which of the following is the term for surgical complications?
+        </p>
+
+        <div class="line"></div>
+
+        <ul class="options" id="options">
+          <li class="list-active">
+            <span>A</span>
+            <span>Gauze grievance disorder</span>
+          </li>
+
+          <li>
+            <span>A</span>
+            <span>Gauze grievance disorder</span>
+          </li>
+
+          <li>
+            <span>A</span>
+            <span>Gauze grievance disorder</span>
+          </li>
+
+          <li>
+            <span>A</span>
+            <span>Gauze grievance disorder</span>
+          </li>
+        </ul>
+
+        <button id="next" class="next-btn">Next</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
