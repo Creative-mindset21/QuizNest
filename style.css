@@ -212,13 +212,27 @@ body::before {
 }
 
 .list-active {
-  background: rgba(255, 255, 255, 0.3);
+  background: #adff2f;
   color: #000;
-  backdrop-filter: blur(3px);
 }
 
-.list-active span:first-of-type {
-  background: var(--color-letter-color);
+.correct {
+  background: #adff2f;
+  color: #000;
+}
+
+.incorrect {
+  background: #ee4b2b;
+  color: #000;
+}
+
+.disable-clicks {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.correct span:first-of-type,
+.incorrect span:first-of-type {
   color: #fff;
 }
 

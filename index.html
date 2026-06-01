@@ -47,49 +47,50 @@
           <div class="home-categories">
             <p>What Topic are you interested in?</p>
 
-            <div class="home-btns">
-              <button>
+            <div class="home-btns" id="category-btn">
+              <button data-category="arts_and_literature">
                 <i class="fa-solid fa-palette"></i>
                 <span>Art</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="science">
+                <i class="fa-solid fa-microscope"></i>
+                <span>Science</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="geography">
+                <i class="fa-solid fa-earth-africa"></i>
+                <span>Geography</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="general_knowledge">
+                <i class="fa-solid fa-brain"></i>
+                <span>General Knowledge</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
-              </button>
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="music">
+                <i class="fa-solid fa-music"></i>
+                <span>Music</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="film_and_tv">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>Film and TV</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="sport_and_leisure">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>Sports and Leisure</span>
               </button>
 
-              <button>
-                <i class="fa-solid fa-palette"></i>
-                <span>Art</span>
+              <button data-category="history">
+                <i class="fa-solid fa-landmark"></i>
+                <span> History </span>
+              </button>
+
+              <button data-category="food_and_drink">
+                <i class="fa-solid fa-burger"></i>
+                <span>Food and Drink</span>
               </button>
             </div>
           </div>
@@ -100,20 +101,17 @@
 
       <div class="questions container" id="question-container">
         <p>
-          Question <span id="current-question">2</span>/<span
+          Question <span id="current-question"></span>/<span
             id="total-questions"
-            >10</span
-          >
+          ></span>
         </p>
 
-        <p id="question" class="question">
-          Which of the following is the term for surgical complications?
-        </p>
+        <p id="question" class="question"></p>
 
         <div class="line"></div>
 
         <ul class="options" id="options">
-          <li class="list-active">
+          <li>
             <span>A</span>
             <span>Gauze grievance disorder</span>
           </li>
